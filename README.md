@@ -9,7 +9,7 @@ Definition of the problem and comments of the script --> we need this one!!
 
 #Phase 1
 
-Scrap the data
+Scrap the data (Now we are using both scrapping_update.py & TwitterSearch_scrapping.py) //Please do remember to change the collection name before you run the code!
 
 Clean the dataset
 
