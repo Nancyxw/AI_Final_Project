@@ -32,26 +32,4 @@ for i in collection.find():
     Data.append(i)
 
 df = pd.DataFrame(Data)
-df.to_csv('microsoftAI.csv')
-
-
-#data analysis
-
-"""
-def read_mongo(db, collection, query={}, host='localhost', port=39436, username="nancyjiang", password="19931124", no_id=True):
-
-    # Connect to MongoDB
-    db = _connect_mongo(host=host, port=port, username=username, password=password, db=dbCC)
-
-    # Make a query to the specific DB and Collection
-    cursor = db[collection].find(query)
-
-    # Expand the cursor and construct the DataFrame
-    df =  pd.DataFrame(list(cursor))
-
-    # Delete the _id
-    if no_id:
-        del df['_id']
-
-    return df
-"""
+df.to_csv('MicrosoftAI.csv')
