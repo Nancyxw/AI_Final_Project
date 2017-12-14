@@ -44,7 +44,7 @@ class listener(StreamListener):
         except pymongo.errors.ConnectionFailure as e:
             print ("Could not connect to MongoDB: %s" % e)
         self.db = self.conn['aifinalproject']
-        self.collection = self.db['MicrosoftAI']
+        self.collection = self.db['MSAI2']
 
     def on_data(self, status):
         if self.num_tweets < 2000:
