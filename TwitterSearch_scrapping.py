@@ -44,7 +44,7 @@ except pymongo.errors.ConnectionFailure as e:
     print ("Could not connect to MongoDB: %s" % e) 
 
 db = conn['aifinalproject']
-collection = db['MicrosoftAI_1']
+collection = db['MSAI_test4_2am']
 
 #Using TwitterSearch (https://github.com/ckoepp/TwitterSearch)
 from TwitterSearch import *
@@ -74,4 +74,4 @@ except TwitterSearchException as e: # take care of all those ugly errors if ther
 #Convert to csv (optional)
 import pandas as pd
 df = pd.DataFrame(data)
-df.to_csv("MicrosoftAI")
+df.to_csv("MSAI_test4.csv")
