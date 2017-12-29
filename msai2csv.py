@@ -23,8 +23,8 @@ except pymongo.errors.ConnectionFailure as e:
 connCC
 
 #connect to the database
-dbCC = connCC.aifinalproject
-collection = dbCC.MicrosoftAI
+dbCC = connCC.aifinalproject_1
+collection = dbCC.MSAI_fulltext1
 
 #collect the data
 Data = []
@@ -32,4 +32,4 @@ for i in collection.find():
     Data.append(i)
 
 df = pd.DataFrame(Data)
-df.to_csv('MicrosoftAI.csv')
+df.to_csv('updated_fulltext.csv',encoding = 'utf-8')
