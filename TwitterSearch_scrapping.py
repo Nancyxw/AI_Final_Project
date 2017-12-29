@@ -44,7 +44,7 @@ except pymongo.errors.ConnectionFailure as e:
     print ("Could not connect to MongoDB: %s" % e) 
 
 db = conn['aifinalproject']
-collection = db['MSAI_test5_3pm']
+collection = db['MSAI_test6_6pm']
 
 #Using TwitterSearch (https://github.com/ckoepp/TwitterSearch)
 from TwitterSearch import *
@@ -66,6 +66,7 @@ try:
     data = []
     for tweet in ts.search_tweets_iterable(tso):
         data.append(tweet)
+        collection.insert_one(tweet)
 #        print( '@%s tweeted: %s' % ( tweet['user']['screen_name'], tweet['text'] ) )
 
 except TwitterSearchException as e: # take care of all those ugly errors if there are some
@@ -74,4 +75,4 @@ except TwitterSearchException as e: # take care of all those ugly errors if ther
 #Convert to csv (optional)
 import pandas as pd
 df = pd.DataFrame(data)
-df.to_csv("MSAI_test5.csv")
+df.to_csv("MSAI_test6.csv")
