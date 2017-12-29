@@ -24,7 +24,7 @@ connCC
 
 #connect to the database
 dbCC = connCC.aifinalproject_1
-collection = dbCC.MSAI_fulltext1
+collection = dbCC.MSAI_fulltext_1220
 
 #collect the data
 Data = []
@@ -32,4 +32,4 @@ for i in collection.find():
     Data.append(i)
 
 df = pd.DataFrame(Data)
-df.to_csv('updated_fulltext.csv',encoding = 'utf-8')
+df.to_csv('updated_fulltext2.csv',encoding = 'utf-8')
