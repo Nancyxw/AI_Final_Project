@@ -15,16 +15,16 @@ try:
         [name,password,url,dbname]=f.read().splitlines()
     connCC=pymongo.MongoClient("mongodb://{}:{}@{}/{}".format(name,password,url,dbname))
     print ("Connected successfully!!!")
-    
+
 except pymongo.errors.ConnectionFailure as e:
-    print ("Could not connect to MongoDB: %s" % e) 
+    print ("Could not connect to MongoDB: %s" % e)
 
 #test connection
 connCC
 
 #connect to the database
 dbCC = connCC.aifinalproject_1
-collection = dbCC.MSAI_fulltext_1220
+collection = dbCC.Magic_Leap
 
 #collect the data
 Data = []
@@ -32,4 +32,4 @@ for i in collection.find():
     Data.append(i)
 
 df = pd.DataFrame(Data)
-df.to_csv('updated_fulltext2.csv',encoding = 'utf-8')
+df.to_csv('magicleap.csv',encoding = 'utf-8')
