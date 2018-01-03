@@ -3,7 +3,7 @@ ESADE_MIBA_AI Final Project
 
 #Phase 0
 
-Define the digital event: MicrosoftAI
+Define the digital event: Magic Leap
 
 Definition of the problem and comments of the script --> we need this one!!
 
